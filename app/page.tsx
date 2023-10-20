@@ -1,19 +1,20 @@
 import CalendarCard from "@/components/cards/CalendarCard";
 import StatBox from "@/components/home/StatBox";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      <section
-        style={{ height: "calc(100vh - 74px)" }}
-        className="bg-emerald-300 flex justify-center items-end"
-      >
+      <section className="bg-emerald-300 h-[50vh] flex justify-center items-end">
         <StatBox />
       </section>
       <section className="my-12 space-y-6 mx-auto container">
-        <h2 className="font-bold text-2xl lg:text-4xl text-gray-700">
-          Upcoming
-        </h2>
+        <div className="flex items-center gap-4 divide-x divide-gray-200">
+          <h2 className="font-bold text-2xl lg:text-4xl text-gray-700">
+            Upcoming Events
+          </h2>
+          <Link href="/" className="text-emerald-500 hover:underline px-2">All Events</Link>
+        </div>
         <div className="space-y-4">
           <CalendarCard
             date="jun"
