@@ -35,7 +35,7 @@ const pages = [
 const NavBar = (props: Props) => {
   return (
     <header className="flex sticky top-0 bg-white/50 backdrop-blur-lg">
-      <nav className="flex gap-x-10 mx-auto container h-full sm:px-4 py-3">
+      <nav className="flex gap-x-10 mx-auto container h-full px-4 py-3">
         <Link href="/" className="relative aspect-square">
           <Image
             alt="logo"
@@ -45,7 +45,7 @@ const NavBar = (props: Props) => {
             className="object-contain"
           />
         </Link>
-        <div className="flex items-center divide-x divide-gray-300">
+        <div className="hidden sm:flex items-center divide-x divide-gray-300">
           {pages.map(page => (
             <Link
               key={page.id}

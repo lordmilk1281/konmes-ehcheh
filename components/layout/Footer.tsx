@@ -45,8 +45,8 @@ const pages = [
 
 const Footer = (props: Props) => {
   return (
-    <footer className="mx-auto sm:px-4 pt-8 container divide-y divide-gray-200">
-      <div className="flex items-start gap-10 pb-10">
+    <footer className="mx-auto px-4 pt-8 container divide-y divide-gray-200">
+      <div className="flex flex-col sm:flex-row items-start gap-10 pb-10">
         <Image
           alt="logo"
           src="/logo.png"
@@ -54,7 +54,7 @@ const Footer = (props: Props) => {
           height={80}
           className="object-contain"
         />
-        <section className="grid divide-y divide-gray-200 w-40">
+        <section className="grid divide-y divide-gray-200 w-full sm:w-40">
           {pages.map(page => (
             <Link
               key={page.id}
