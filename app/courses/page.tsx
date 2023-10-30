@@ -1,3 +1,4 @@
+import CourseCard from "@/components/cards/CourseCard";
 import React from "react";
 
 type Props = {};
@@ -38,12 +39,7 @@ const Courses = (props: Props) => {
       </section>
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {mainGroups.map(group => (
-          <div key={group.name} className="space-y-1 group cursor-pointer">
-            <div className="bg-emerald-300 rounded-lg aspect-video group-hover:bg-emerald-400" />
-            <p className="font-medium text-lg md:text-xl text-gray-700 group-hover:text-gray-900">
-              {group.name}
-            </p>
-          </div>
+          <CourseCard {...group} title={group.name} key={group.name} />
         ))}
       </section>
     </div>
